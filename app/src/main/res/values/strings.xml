@@ -5,5 +5,8 @@
     <string name="this_is_the_translated_text">This is the translated text</string>
     <string name="source_language">Source language</string>
     <string name="target_language">Target language</string>
+    <string name="logo">Logo</string>
+    <string name="lingua">Lingua</string>
+    <string name="flow">Flow</string>
 
 </resources>

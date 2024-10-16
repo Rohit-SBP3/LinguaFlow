@@ -6,41 +6,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#EFE167"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txt_title"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textColor="@color/primary"
-        android:textSize="32sp"
-        android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_ligua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lingua"
+            android:textColor="@color/primary"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_flow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flow"
+            android:textColor="@color/primaryBg"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/source_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="@drawable/edittext_bg"
-        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        android:background="@drawable/source_bg"
+        app:layout_constraintTop_toBottomOf="@id/ll_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:boxStrokeColor="@color/primary">
 
-        <AutoCompleteTextView
+        <Spinner
             android:id="@+id/source_spinner"
             android:layout_width="match_parent"
+            android:minHeight="48sp"
             android:layout_height="wrap_content"
-            android:hint="@string/source_language"
-            android:inputType="none"
-            android:padding="12dp"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:padding="12dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -49,20 +64,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/target_bg"
         app:layout_constraintTop_toBottomOf="@id/source_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:boxStrokeColor="@color/primary">
 
-        <AutoCompleteTextView
+        <Spinner
             android:id="@+id/target_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/target_language"
-            android:inputType="none"
-            android:padding="12dp"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:minHeight="48sp"
+            android:padding="12dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -83,7 +96,7 @@
             android:hint="@string/enter_the_text_to_translate"
             android:textSize="16sp"
             android:scrollbars="vertical"
-            android:background="@drawable/edittext_bg"
+            android:background="@drawable/source_bg"
             android:gravity="top"
             android:inputType="textMultiLine"
             android:overScrollMode="always"
@@ -110,7 +123,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/target_bg"
         app:layout_constraintTop_toBottomOf="@id/btn_translate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
