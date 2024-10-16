@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LinguaFlow</string>
+    <string name="enter_the_text_to_translate">Enter the text to translate</string>
+    <string name="translate">Translate</string>
+    <string name="this_is_the_translated_text">This is the translated text</string>
+    <string name="source_language">Source language</string>
+    <string name="target_language">Target language</string>
+
+</resources>
